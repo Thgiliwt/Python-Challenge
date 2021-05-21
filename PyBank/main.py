@@ -1,5 +1,6 @@
 import os
 import csv
+from contextlib import redirect_stdout
 
 pybank_path = os.path.join('Resources','budget_data.csv')
 
@@ -29,7 +30,7 @@ with open(pybank_path,'r') as bankcsv:
         change_min_date = str(row_list[change_list.index(change_min)+1])
     
     #Below is my initial method where due to the change of pointer position, I have to keep adding '.seek(0)' to replace it back to starting position.
-    
+
     # row_count = len(list(csvreader)) - 1
 
     # bankcsv.seek(0)
@@ -57,3 +58,17 @@ with open(pybank_path,'r') as bankcsv:
     print(f"Greatest Increase in Profits: {change_max_date} (${change_max})")
     print(f"Greatest Decrease in Profits: {change_min_date} (${change_min})")
     bankcsv.close()
+
+
+
+
+with open(r'D:\Repo\Python-Challenge\PyBank\Analysis\Pybank_Result.txt','w') as f:
+    with redirect_stdout(f):
+        print("Financial Analysis")
+        print("------------------------------")   
+        print(f"Total Months: {len(row_list)}")
+        print(f"Total: ${sum(value_list)}")
+        print("Average  Change: $%0.2f" %change_avg)
+        print(f"Greatest Increase in Profits: {change_max_date} (${change_max})")
+        print(f"Greatest Decrease in Profits: {change_min_date} (${change_min})")
+f.close()
