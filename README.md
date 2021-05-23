@@ -20,6 +20,18 @@ By far, I have spent a lot of time on searching some solutions from the websites
 During the work, I could often see people talking about new modules, add-ons etc. from the websites. Take Panda as an example, it seems like that it could solve the pyroll task so easy. I also imported 'counter' for the task and it has done a great job which save my time and line of coding a lot.
 
 ### Methods and codes abandonede
+
+#### PyBank:
+    #Below is my initial method where due to the change of pointer position, I have to keep adding '.seek(0)' to replace it back to starting position.
+    # row_count = len(list(csvreader)) - 1
+    # bankcsv.seek(0)
+    # next(csvreader)    
+    # value_sum = 0    
+    # for row in csvreader:
+    #     value_sum = value_sum + int(row[1])
+    # bankcsv.seek(0)  
+    
+#### PyRoll:
     #candidate_list = set()
     #candidate_list.add(row[2])
     #election = dict()
