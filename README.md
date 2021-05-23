@@ -18,3 +18,14 @@ By far, I have spent a lot of time on searching some solutions from the websites
 
 ### Tools, Modules
 During the work, I could often see people talking about new modules, add-ons etc. from the websites. Take Panda as an example, it seems like that it could solve the pyroll task so easy. I also imported 'counter' for the task and it has done a great job which save my time and line of coding a lot.
+
+### Methods and codes abandonede
+    #candidate_list = set()
+    #candidate_list.add(row[2])
+    #election = dict()
+
+    #election["candidate"] = candidates_list
+    #election["percentage"] = indiv_percent
+    #election["vote"] = values_list
+    
+    #temp = '%(candidate)s, %(percentage)0.3f, (%(vote)i)'
