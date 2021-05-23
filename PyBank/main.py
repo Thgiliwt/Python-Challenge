@@ -60,9 +60,9 @@ with open(pybank_path,'r') as bankcsv:
     bankcsv.close()
 
 
+output_path = os.path.join('Analysis','Pybank_Result.txt')
 
-
-with open(r'D:\Repo\Python-Challenge\PyBank\Analysis\Pybank_Result.txt','w') as f:
+with open(output_path,'w') as f:
     with redirect_stdout(f):
         print("Financial Analysis")
         print("------------------------------")   
